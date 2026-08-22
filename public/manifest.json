@@ -1,0 +1,17 @@
+{
+  "short_name": "CrowdShield",
+  "name": "CrowdShield Nexus Mela Safety",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1085/1085737.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0D1B2A",
+  "theme_color": "#0D1B2A",
+  "display": "standalone",
+  "orientation": "portrait"
+}

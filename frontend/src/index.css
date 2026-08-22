@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  /* Pastel & Clay Tokens */
+  --clay-bg-dark: #0D1B2A;
+  --pastel-blue: #A8D8EA;
+  --pastel-coral: #FF8B94;
+  --pastel-mint: #AEDCC0;
+  --pastel-lavender: #C3B1E1;
+
+  --clay-card-dark: #1B263B;
+
+  --clay-shadow-dark: 
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.15),
+    inset -3px -3px 6px rgba(0, 0, 0, 0.5);
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--clay-bg-dark);
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(168, 216, 234, 0.08) 0px, transparent 50%),
+    radial-gradient(at 85% 15%, rgba(195, 177, 225, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 85%, rgba(255, 139, 148, 0.06) 0px, transparent 60%);
+  background-attachment: fixed;
+  color: #F8FAFC;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.clay-card-puffy {
+  background: var(--clay-card-dark);
+  border-radius: 26px;
+  box-shadow: var(--clay-shadow-dark);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.clay-card-puffy:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 28px 60px rgba(0, 0, 0, 0.5),
+    inset 3px 3px 6px rgba(255, 255, 255, 0.22),
+    inset -3px -3px 6px rgba(0, 0, 0, 0.5);
+  border-color: rgba(168, 216, 234, 0.3);
+}
+
+.clay-btn-blue {
+  background: linear-gradient(135deg, #A8D8EA, #70A6FF);
+  color: #0D1B2A;
+  border-radius: 18px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.2rem;
+  box-shadow: 
+    0 8px 20px rgba(168, 216, 234, 0.3),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.clay-btn-coral {
+  background: linear-gradient(135deg, #FF8B94, #FF5252);
+  color: #FFFFFF;
+  border-radius: 18px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.2rem;
+  box-shadow: 
+    0 8px 20px rgba(255, 139, 148, 0.35),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes breathingPulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 139, 148, 0.7); }
+  50% { transform: scale(1.06); box-shadow: 0 0 0 16px rgba(255, 139, 148, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 139, 148, 0); }
+}
+
+.animate-breathing {
+  animation: breathingPulse 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.phone-chassis {
+  width: 300px;
+  height: 500px;
+  background: #0a0e1a;
+  border-radius: 32px;
+  box-shadow: var(--clay-shadow-dark);
+  border: 4px solid #1e293b;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-notch {
+  width: 100px;
+  height: 14px;
+  background: #1e293b;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 50;
+}
